@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/Button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/Card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
 import Link from "next/link";
 import { Users, Award, Clock, MapPin, Heart, Target } from "lucide-react";
 import { ScrollReveal } from "@/hooks/useScrollReveal";
@@ -140,75 +140,89 @@ export default function About() {
       {/* Diferenciais */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              Por que escolher a FitLife?
-            </h2>
-            <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-              Conheça os diferenciais que fazem da FitLife a melhor escolha para sua jornada fitness
-            </p>
-          </div>
+          <ScrollReveal delay={100}>
+            <div className="text-center mb-16">
+              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+                Por que escolher a FitLife?
+              </h2>
+              <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+                Conheça os diferenciais que fazem da FitLife a melhor escolha para sua jornada fitness
+              </p>
+            </div>
+          </ScrollReveal>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-red-500" />
+            <ScrollReveal delay={200} direction="up">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Users className="w-8 h-8 text-red-500" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">Equipe Especializada</h3>
+                <p className="text-gray-400">
+                  Profissionais formados e com especializações nas mais diversas modalidades
+                </p>
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Equipe Especializada</h3>
-              <p className="text-gray-400">
-                Profissionais formados e com especializações nas mais diversas modalidades
-              </p>
-            </div>
+            </ScrollReveal>
 
-            <div className="text-center">
-              <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Clock className="w-8 h-8 text-red-500" />
+            <ScrollReveal delay={300} direction="up">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Clock className="w-8 h-8 text-red-500" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">Funcionamento 24h</h3>
+                <p className="text-gray-400">
+                  Treinar no seu horário, seja de madrugada ou durante o dia
+                </p>
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Funcionamento 24h</h3>
-              <p className="text-gray-400">
-                Treinar no seu horário, seja de madrugada ou durante o dia
-              </p>
-            </div>
+            </ScrollReveal>
 
-            <div className="text-center">
-              <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Award className="w-8 h-8 text-red-500" />
+            <ScrollReveal delay={400} direction="up">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Award className="w-8 h-8 text-red-500" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">Equipamentos Premium</h3>
+                <p className="text-gray-400">
+                  Máquinas e equipamentos das melhores marcas do mercado mundial
+                </p>
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Equipamentos Premium</h3>
-              <p className="text-gray-400">
-                Máquinas e equipamentos das melhores marcas do mercado mundial
-              </p>
-            </div>
+            </ScrollReveal>
 
-            <div className="text-center">
-              <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <MapPin className="w-8 h-8 text-red-500" />
+            <ScrollReveal delay={500} direction="up">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <MapPin className="w-8 h-8 text-red-500" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">Localização Privilegiada</h3>
+                <p className="text-gray-400">
+                  No coração da cidade, com fácil acesso e estacionamento gratuito
+                </p>
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Localização Privilegiada</h3>
-              <p className="text-gray-400">
-                No coração da cidade, com fácil acesso e estacionamento gratuito
-              </p>
-            </div>
+            </ScrollReveal>
 
-            <div className="text-center">
-              <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Heart className="w-8 h-8 text-red-500" />
+            <ScrollReveal delay={600} direction="up">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Heart className="w-8 h-8 text-red-500" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">Ambiente Acolhedor</h3>
+                <p className="text-gray-400">
+                  Espaço pensado para seu conforto e bem-estar durante os treinos
+                </p>
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Ambiente Acolhedor</h3>
-              <p className="text-gray-400">
-                Espaço pensado para seu conforto e bem-estar durante os treinos
-              </p>
-            </div>
+            </ScrollReveal>
 
-            <div className="text-center">
-              <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Target className="w-8 h-8 text-red-500" />
+            <ScrollReveal delay={700} direction="up">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Target className="w-8 h-8 text-red-500" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">Foco em Resultados</h3>
+                <p className="text-gray-400">
+                  Acompanhamento personalizado para garantir que você alcance seus objetivos
+                </p>
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Foco em Resultados</h3>
-              <p className="text-gray-400">
-                Acompanhamento personalizado para garantir que você alcance seus objetivos
-              </p>
-            </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -216,24 +230,30 @@ export default function About() {
       {/* CTA */}
       <section className="py-20 bg-gradient-to-r from-red-600 to-red-700">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-            Venha Conhecer Nossa Academia
-          </h2>
-          <p className="text-lg text-red-100 mb-8">
-            Agende uma visita gratuita e descubra como podemos ajudar você a alcançar seus objetivos
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact">
-              <Button size="lg" variant="secondary" className="w-full sm:w-auto bg-white text-red-600 hover:bg-gray-100">
-                Agendar Visita
-              </Button>
-            </Link>
-            <Link href="/plans">
-              <Button size="lg" variant="outline" className="w-full sm:w-auto border-white text-white hover:bg-white hover:text-red-600">
-                Ver Planos
-              </Button>
-            </Link>
-          </div>
+          <ScrollReveal delay={100}>
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              Venha Conhecer Nossa Academia
+            </h2>
+          </ScrollReveal>
+          <ScrollReveal delay={200}>
+            <p className="text-lg text-red-100 mb-8">
+              Agende uma visita gratuita e descubra como podemos ajudar você a alcançar seus objetivos
+            </p>
+          </ScrollReveal>
+          <ScrollReveal delay={300}>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact">
+                <Button size="lg" variant="secondary" className="w-full sm:w-auto bg-white text-red-600 hover:bg-gray-100">
+                  Agendar Visita
+                </Button>
+              </Link>
+              <Link href="/plans">
+                <Button size="lg" variant="outline" className="w-full sm:w-auto border-white text-white hover:bg-white hover:text-red-600">
+                  Ver Planos
+                </Button>
+              </Link>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
     </>
