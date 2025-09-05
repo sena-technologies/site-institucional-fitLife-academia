@@ -234,7 +234,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 pb-20">
             {modalidadesDestaque.map((modalidade, index) => (
               <div key={index} className={`animate-fade-in-up animation-delay-${(index % 4) * 200}`}>
                 <ModalityCard
