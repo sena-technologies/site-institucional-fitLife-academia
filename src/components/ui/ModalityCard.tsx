@@ -56,10 +56,13 @@ export default function ModalityCard({
       </Card>
 
       {/* Tooltip com horários - movido para fora do Card */}
-      <div className={`absolute left-0 right-0 top-full mt-2 z-50 transition-all duration-300 pointer-events-none ${
+      <div className={`absolute left-0 right-0 top-full mt-2 z-[9999] transition-all duration-300 pointer-events-none ${
         isHovered ? 'opacity-100 visible translate-y-0 pointer-events-auto' : 'opacity-0 invisible -translate-y-2'
       }`}>
-        <div className="bg-gray-800 border border-gray-600 rounded-lg p-4 shadow-xl">
+        <div className="bg-gray-800 border border-gray-600 rounded-lg p-4 shadow-2xl relative">
+          {/* Seta apontando para cima */}
+          <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-gray-800 border-l border-t border-gray-600 rotate-45"></div>
+          
           <h4 className="text-white font-semibold mb-3 text-center">Horários de {name}</h4>
           <div className="space-y-2">
             {schedule.days.map((day, index) => (

@@ -234,7 +234,7 @@ export default function HomePage() {
       </section>
 
       {/* Modalidades */}
-      <section className="py-20 bg-black">
+      <section className="py-20 bg-black relative">
         <div className="container mx-auto px-4">
           <ScrollReveal delay={100}>
             <div className="text-center mb-16">
@@ -247,7 +247,8 @@ export default function HomePage() {
             </div>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 pb-20">
+          {/* Grid com espaçamento extra para tooltips */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 pb-32">
             {modalidadesDestaque.map((modalidade, index) => (
               <ScrollReveal key={index} delay={200 + (index * 100)} direction="up">
                 <ModalityCard
