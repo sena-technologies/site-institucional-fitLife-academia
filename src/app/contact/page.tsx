@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/Button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
 import { MapPin, Phone, Mail, Clock, MessageCircle } from "lucide-react";
 import { useState } from 'react';
+import { ScrollReveal } from "@/hooks/useScrollReveal";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -30,7 +31,7 @@ export default function Contact() {
       await new Promise(resolve => setTimeout(resolve, 2000));
       setSubmitStatus('success');
       setFormData({ name: '', email: '', phone: '', subject: 'visita', message: '' });
-    } catch (error) {
+    } catch {
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -67,12 +68,13 @@ export default function Contact() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             
             {/* Contact Form */}
-            <div>
-              <Card>
-                <CardHeader>
-                  <CardTitle>Envie uma mensagem</CardTitle>
-                </CardHeader>
-                <CardContent>
+            <ScrollReveal delay={100} direction="left">
+              <div>
+                <Card>
+                  <CardHeader>
+                    <CardTitle>Envie uma mensagem</CardTitle>
+                  </CardHeader>
+                  <CardContent>
                   {submitStatus === 'success' && (
                     <div className="mb-6 p-4 bg-green-500/20 border border-green-500 rounded-lg">
                       <p className="text-green-400">
@@ -183,15 +185,17 @@ export default function Contact() {
                   </form>
                 </CardContent>
               </Card>
-            </div>
+              </div>
+            </ScrollReveal>
 
             {/* Contact Info */}
-            <div className="space-y-8">
-              <Card>
-                <CardHeader>
-                  <CardTitle>Informações de Contato</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-6">
+            <ScrollReveal delay={200} direction="right">
+              <div className="space-y-8">
+                <Card>
+                  <CardHeader>
+                    <CardTitle>Informações de Contato</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-6">
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-red-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
                       <MapPin className="w-6 h-6 text-red-400" />
@@ -283,7 +287,8 @@ export default function Contact() {
                   </div>
                 </CardContent>
               </Card>
-            </div>
+              </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -291,20 +296,26 @@ export default function Contact() {
       {/* CTA */}
       <section className="py-20 bg-gradient-to-r from-red-600 to-red-700">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-            Venha Conhecer Nossa Academia
-          </h2>
-          <p className="text-lg text-red-100 mb-8">
-            Agende uma visita gratuita e sem compromisso
-          </p>
-          <Button 
-            size="lg" 
-            variant="secondary" 
-            className="bg-white text-red-600 hover:bg-gray-100"
-            onClick={() => window.open('https://wa.me/5511987654321?text=Olá! Gostaria de agendar uma visita gratuita na FitLife Academia.', '_blank')}
-          >
-            Agendar Visita via WhatsApp
-          </Button>
+          <ScrollReveal delay={100}>
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              Venha Conhecer Nossa Academia
+            </h2>
+          </ScrollReveal>
+          <ScrollReveal delay={200}>
+            <p className="text-lg text-red-100 mb-8">
+              Agende uma visita gratuita e sem compromisso
+            </p>
+          </ScrollReveal>
+          <ScrollReveal delay={300}>
+            <Button 
+              size="lg" 
+              variant="secondary" 
+              className="bg-white text-red-600 hover:bg-gray-100"
+              onClick={() => window.open('https://wa.me/5511987654321?text=Olá! Gostaria de agendar uma visita gratuita na FitLife Academia.', '_blank')}
+            >
+              Agendar Visita via WhatsApp
+            </Button>
+          </ScrollReveal>
         </div>
       </section>
     </>

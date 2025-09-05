@@ -4,6 +4,7 @@ import HeroBanner from "@/components/ui/HeroBanner";
 import ModalityCard from "@/components/ui/ModalityCard";
 import Link from "next/link";
 import { Check, X, Star, Clock, Users } from "lucide-react";
+import { ScrollReveal } from "@/hooks/useScrollReveal";
 
 export default function Plans() {
   const plans = [

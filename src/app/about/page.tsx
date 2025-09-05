@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/Button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/Card";
 import Link from "next/link";
 import { Users, Award, Clock, MapPin, Heart, Target } from "lucide-react";
+import { ScrollReveal } from "@/hooks/useScrollReveal";
 
 export default function About() {
   return (
@@ -32,32 +33,36 @@ export default function About() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-                Nossa História
-              </h2>
-              <div className="space-y-4 text-gray-300">
-                <p>
-                  A FitLife nasceu em 2014 com um sonho: criar um espaço onde pessoas de todas as idades e níveis de condicionamento físico pudessem se sentir acolhidas e motivadas a alcançar seus objetivos.
-                </p>
-                <p>
-                  Começamos com uma pequena academia no centro da cidade, mas nossa paixão pelo fitness e pelo bem-estar das pessoas nos levou a crescer e nos tornar referência na região.
-                </p>
-                <p>
-                  Hoje, contamos com mais de 500 alunos ativos, equipamentos de última geração e uma equipe de profissionais altamente qualificados, todos unidos pelo mesmo propósito: transformar vidas através do movimento.
-                </p>
+            <ScrollReveal delay={100} direction="left">
+              <div>
+                <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+                  Nossa História
+                </h2>
+                <div className="space-y-4 text-gray-300">
+                  <p>
+                    A FitLife nasceu em 2014 com um sonho: criar um espaço onde pessoas de todas as idades e níveis de condicionamento físico pudessem se sentir acolhidas e motivadas a alcançar seus objetivos.
+                  </p>
+                  <p>
+                    Começamos com uma pequena academia no centro da cidade, mas nossa paixão pelo fitness e pelo bem-estar das pessoas nos levou a crescer e nos tornar referência na região.
+                  </p>
+                  <p>
+                    Hoje, contamos com mais de 500 alunos ativos, equipamentos de última geração e uma equipe de profissionais altamente qualificados, todos unidos pelo mesmo propósito: transformar vidas através do movimento.
+                  </p>
+                </div>
               </div>
-            </div>
-            <div className="relative">
-              <div className="aspect-video rounded-lg overflow-hidden">
-                <div 
-                  className="w-full h-full bg-cover bg-center"
-                  style={{
-                    backgroundImage: "url('https://images.unsplash.com/photo-1571902943202-507ec2618e8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2075&q=80')"
-                  }}
-                />
+            </ScrollReveal>
+            <ScrollReveal delay={200} direction="right">
+              <div className="relative">
+                <div className="aspect-video rounded-lg overflow-hidden">
+                  <div 
+                    className="w-full h-full bg-cover bg-center"
+                    style={{
+                      backgroundImage: "url('https://images.unsplash.com/photo-1571902943202-507ec2618e8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2075&q=80')"
+                    }}
+                  />
+                </div>
               </div>
-            </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -65,61 +70,69 @@ export default function About() {
       {/* Missão, Visão e Valores */}
       <section className="py-20 bg-gray-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              Nossos Pilares
-            </h2>
-            <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-              Os valores que nos guiam em nossa missão de transformar vidas
-            </p>
-          </div>
+          <ScrollReveal delay={100}>
+            <div className="text-center mb-16">
+              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+                Nossos Pilares
+              </h2>
+              <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+                Os valores que nos guiam em nossa missão de transformar vidas
+              </p>
+            </div>
+          </ScrollReveal>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card>
-              <CardHeader className="text-center">
-                <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Target className="w-8 h-8 text-white" />
-                </div>
-                <CardTitle>Missão</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-400 text-center">
-                  Proporcionar um ambiente acolhedor e motivador onde cada pessoa possa descobrir seu potencial máximo através do fitness e alcançar uma vida mais saudável e feliz.
-                </p>
-              </CardContent>
-            </Card>
+            <ScrollReveal delay={200}>
+              <Card>
+                <CardHeader className="text-center">
+                  <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Target className="w-8 h-8 text-white" />
+                  </div>
+                  <CardTitle>Missão</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-400 text-center">
+                    Proporcionar um ambiente acolhedor e motivador onde cada pessoa possa descobrir seu potencial máximo através do fitness e alcançar uma vida mais saudável e feliz.
+                  </p>
+                </CardContent>
+              </Card>
+            </ScrollReveal>
 
-            <Card>
-              <CardHeader className="text-center">
-                <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Award className="w-8 h-8 text-white" />
-                </div>
-                <CardTitle>Visão</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-400 text-center">
-                  Ser reconhecida como a melhor academia da região, referência em qualidade, inovação e resultados, impactando positivamente a vida de milhares de pessoas.
-                </p>
-              </CardContent>
-            </Card>
+            <ScrollReveal delay={300}>
+              <Card>
+                <CardHeader className="text-center">
+                  <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Award className="w-8 h-8 text-white" />
+                  </div>
+                  <CardTitle>Visão</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-400 text-center">
+                    Ser reconhecida como a melhor academia da região, referência em qualidade, inovação e resultados, impactando positivamente a vida de milhares de pessoas.
+                  </p>
+                </CardContent>
+              </Card>
+            </ScrollReveal>
 
-            <Card>
-              <CardHeader className="text-center">
-                <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Heart className="w-8 h-8 text-white" />
-                </div>
-                <CardTitle>Valores</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ul className="text-gray-400 space-y-2">
-                  <li>• Excelência no atendimento</li>
-                  <li>• Respeito e inclusão</li>
-                  <li>• Inovação constante</li>
-                  <li>• Compromisso com resultados</li>
-                  <li>• Trabalho em equipe</li>
-                </ul>
-              </CardContent>
-            </Card>
+            <ScrollReveal delay={400}>
+              <Card>
+                <CardHeader className="text-center">
+                  <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Heart className="w-8 h-8 text-white" />
+                  </div>
+                  <CardTitle>Valores</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="text-gray-400 space-y-2">
+                    <li>• Excelência no atendimento</li>
+                    <li>• Respeito e inclusão</li>
+                    <li>• Inovação constante</li>
+                    <li>• Compromisso com resultados</li>
+                    <li>• Trabalho em equipe</li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </ScrollReveal>
           </div>
         </div>
       </section>
