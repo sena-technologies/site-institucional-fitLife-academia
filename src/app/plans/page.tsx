@@ -160,27 +160,33 @@ export default function PlansPage() {
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* Plano Básico */}
             <ScrollReveal delay={200} direction="left">
-              <Card className="bg-gray-800 border-gray-700 overflow-hidden hover-card transition-all duration-300 hover:scale-105">
-                {/* Header colorido com gradiente */}
-                <div className="bg-gradient-to-r from-gray-600 to-gray-700 p-6 text-center">
-                  <h3 className="text-2xl font-bold text-white mb-2">Básico</h3>
-                  <p className="text-white/90 mb-4">Ideal para iniciantes</p>
-                  <div className="text-white">
-                    <span className="text-4xl font-bold">R$ 89</span>
-                    <span className="text-lg opacity-80">/mês</span>
-                  </div>
+              <Card className="bg-gradient-to-br from-slate-800 via-slate-900 to-black border border-slate-700 rounded-2xl overflow-hidden hover-card transition-all duration-300 hover:scale-105 hover:border-yellow-400/50">
+                {/* Badge Superior */}
+                <div className="pt-6 pb-2 text-center">
+                  <span className="bg-yellow-400 text-black px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wide">
+                    ESSENCIAL
+                  </span>
                 </div>
                 
-                <div className="p-6">
-                  <ul className="text-gray-300 space-y-3 mb-8">
-                    <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Acesso à musculação</li>
-                    <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Vestiário com armários</li>
-                    <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Avaliação física inicial</li>
-                    <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> App FitLife</li>
+                {/* Conteúdo Principal */}
+                <div className="px-8 pb-8 text-center">
+                  <h3 className="text-4xl font-bold text-white mb-6">Básico</h3>
+                  
+                  <div className="mb-8">
+                    <span className="text-5xl font-black text-yellow-400">R$ 89</span>
+                    <span className="text-gray-400 text-lg">/mês</span>
+                  </div>
+                  
+                  <ul className="text-left text-gray-300 space-y-3 mb-8">
+                    <li className="flex items-center"><span className="text-green-400 mr-3">✓</span> Acesso à musculação</li>
+                    <li className="flex items-center"><span className="text-green-400 mr-3">✓</span> Vestiário com armários</li>
+                    <li className="flex items-center"><span className="text-green-400 mr-3">✓</span> Avaliação física inicial</li>
+                    <li className="flex items-center"><span className="text-green-400 mr-3">✓</span> App FitLife</li>
                   </ul>
+                  
                   <Link href="/contact">
-                    <Button className="w-full bg-gradient-to-r from-gray-600 to-gray-700 hover:opacity-90 text-white font-bold py-3 text-lg shadow-lg transition-all duration-300 hover:shadow-xl">
-                      Escolher Básico
+                    <Button className="w-full bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-4 text-lg rounded-xl transition-all duration-300 hover:shadow-xl hover:shadow-yellow-400/25 uppercase tracking-wide">
+                      COMEÇAR AGORA
                     </Button>
                   </Link>
                 </div>
@@ -189,35 +195,34 @@ export default function PlansPage() {
 
             {/* Plano Premium */}
             <ScrollReveal delay={300}>
-              <Card className="bg-gray-800 border-blue-500 overflow-hidden transform scale-105 hover-card transition-all duration-300 hover:scale-110 ring-2 ring-blue-500 ring-opacity-50">
-                {/* Badge de mais popular */}
-                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
-                  <span className="bg-yellow-400 text-black px-4 py-1 rounded-full text-sm font-bold shadow-lg animate-pulse">
+              <Card className="bg-gradient-to-br from-red-600 via-red-700 to-red-800 border-2 border-red-400 rounded-2xl overflow-hidden transform scale-105 hover-card transition-all duration-300 hover:scale-110 shadow-2xl shadow-red-500/25">
+                {/* Badge Superior */}
+                <div className="pt-6 pb-2 text-center">
+                  <span className="bg-yellow-400 text-black px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wide animate-pulse">
                     MAIS POPULAR
                   </span>
                 </div>
                 
-                {/* Header colorido com gradiente */}
-                <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-6 text-center relative">
-                  <h3 className="text-2xl font-bold text-white mb-2">Premium</h3>
-                  <p className="text-white/90 mb-4">Para quem quer resultados</p>
-                  <div className="text-white">
-                    <span className="text-4xl font-bold">R$ 139</span>
-                    <span className="text-lg opacity-80">/mês</span>
+                {/* Conteúdo Principal */}
+                <div className="px-8 pb-8 text-center">
+                  <h3 className="text-4xl font-bold text-white mb-6">Premium</h3>
+                  
+                  <div className="mb-8">
+                    <span className="text-5xl font-black text-white">R$ 139</span>
+                    <span className="text-red-200 text-lg">/mês</span>
                   </div>
-                </div>
-                
-                <div className="p-6">
-                  <ul className="text-gray-300 space-y-3 mb-8">
-                    <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Todos os benefícios do Básico</li>
-                    <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Aulas coletivas ilimitadas</li>
-                    <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Área de funcional</li>
-                    <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> 2 avaliações mensais</li>
-                    <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Zona VIP</li>
+                  
+                  <ul className="text-left text-white space-y-3 mb-8">
+                    <li className="flex items-center"><span className="text-yellow-400 mr-3">✓</span> Todos os benefícios do Básico</li>
+                    <li className="flex items-center"><span className="text-yellow-400 mr-3">✓</span> Aulas coletivas ilimitadas</li>
+                    <li className="flex items-center"><span className="text-yellow-400 mr-3">✓</span> Área de funcional</li>
+                    <li className="flex items-center"><span className="text-yellow-400 mr-3">✓</span> 2 avaliações mensais</li>
+                    <li className="flex items-center"><span className="text-yellow-400 mr-3">✓</span> Zona VIP</li>
                   </ul>
+                  
                   <Link href="/contact">
-                    <Button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:opacity-90 text-white font-bold py-3 text-lg shadow-lg transition-all duration-300 hover:shadow-xl">
-                      Escolher Premium
+                    <Button className="w-full bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-4 text-lg rounded-xl transition-all duration-300 hover:shadow-xl hover:shadow-yellow-400/25 uppercase tracking-wide">
+                      ⭐ ESCOLHER PREMIUM
                     </Button>
                   </Link>
                 </div>
@@ -226,28 +231,34 @@ export default function PlansPage() {
 
             {/* Plano VIP */}
             <ScrollReveal delay={400} direction="right">
-              <Card className="bg-gray-800 border-yellow-500 overflow-hidden hover-card transition-all duration-300 hover:scale-105">
-                {/* Header colorido com gradiente */}
-                <div className="bg-gradient-to-r from-yellow-500 to-orange-500 p-6 text-center">
-                  <h3 className="text-2xl font-bold text-white mb-2">VIP</h3>
-                  <p className="text-white/90 mb-4">Experiência completa</p>
-                  <div className="text-white">
-                    <span className="text-4xl font-bold">R$ 199</span>
-                    <span className="text-lg opacity-80">/mês</span>
-                  </div>
+              <Card className="bg-gradient-to-br from-purple-800 via-purple-900 to-black border border-purple-500 rounded-2xl overflow-hidden hover-card transition-all duration-300 hover:scale-105 hover:border-purple-400/50">
+                {/* Badge Superior */}
+                <div className="pt-6 pb-2 text-center">
+                  <span className="bg-purple-500 text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wide">
+                    ELITE
+                  </span>
                 </div>
                 
-                <div className="p-6">
-                  <ul className="text-gray-300 space-y-3 mb-8">
-                    <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Todos os benefícios do Premium</li>
-                    <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Personal trainer 2x/semana</li>
-                    <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Nutricionista incluso</li>
-                    <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Acesso 24h</li>
-                    <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Estacionamento gratuito</li>
+                {/* Conteúdo Principal */}
+                <div className="px-8 pb-8 text-center">
+                  <h3 className="text-4xl font-bold text-white mb-6">VIP</h3>
+                  
+                  <div className="mb-8">
+                    <span className="text-5xl font-black text-yellow-400">R$ 199</span>
+                    <span className="text-gray-400 text-lg">/mês</span>
+                  </div>
+                  
+                  <ul className="text-left text-gray-300 space-y-3 mb-8">
+                    <li className="flex items-center"><span className="text-green-400 mr-3">✓</span> Todos os benefícios do Premium</li>
+                    <li className="flex items-center"><span className="text-green-400 mr-3">✓</span> Personal trainer 2x/semana</li>
+                    <li className="flex items-center"><span className="text-green-400 mr-3">✓</span> Nutricionista incluso</li>
+                    <li className="flex items-center"><span className="text-green-400 mr-3">✓</span> Acesso 24h</li>
+                    <li className="flex items-center"><span className="text-green-400 mr-3">✓</span> Estacionamento gratuito</li>
                   </ul>
+                  
                   <Link href="/contact">
-                    <Button className="w-full bg-gradient-to-r from-yellow-500 to-orange-500 hover:opacity-90 text-white font-bold py-3 text-lg shadow-lg transition-all duration-300 hover:shadow-xl">
-                      Escolher VIP
+                    <Button className="w-full bg-purple-500 hover:bg-purple-600 text-white font-bold py-4 text-lg rounded-xl transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/25 uppercase tracking-wide">
+                      QUERO SER VIP
                     </Button>
                   </Link>
                 </div>
