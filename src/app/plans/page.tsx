@@ -148,11 +148,11 @@ export default function PlansPage() {
         <div className="container mx-auto px-4">
           <ScrollReveal delay={100}>
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">
-                Nossos <span className="text-red-600">Planos</span>
+              <h2 className="text-5xl md:text-6xl font-black text-white mb-6">
+                Nossos <span className="text-red-500 neon-glow">Planos</span>
               </h2>
-              <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-                Escolha o plano que melhor se adapta ao seu estilo de vida e objetivos.
+              <p className="text-gray-300 text-xl max-w-3xl mx-auto leading-relaxed">
+                Escolha o plano que vai <span className="text-yellow-400 font-semibold">revolucionar</span> seu estilo de vida. Cada plano foi pensado para <span className="text-red-400 font-semibold">maximizar seus resultados</span>.
               </p>
             </div>
           </ScrollReveal>
@@ -160,7 +160,7 @@ export default function PlansPage() {
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* Plano Básico */}
             <ScrollReveal delay={200} direction="left">
-              <Card className="bg-gradient-to-br from-slate-800 via-slate-900 to-black border border-slate-700 rounded-2xl overflow-hidden hover-card transition-all duration-300 hover:scale-105 hover:border-yellow-400/50">
+              <Card className="bg-gradient-to-br from-slate-800 via-slate-900 to-black border border-slate-700 rounded-2xl overflow-hidden hover-card transition-all duration-300 hover:scale-105 hover:border-yellow-400/50 card-glow">
                 {/* Badge Superior */}
                 <div className="pt-6 pb-2 text-center">
                   <span className="bg-yellow-400 text-black px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wide">
@@ -195,16 +195,19 @@ export default function PlansPage() {
 
             {/* Plano Premium */}
             <ScrollReveal delay={300}>
-              <Card className="bg-gradient-to-br from-red-600 via-red-700 to-red-800 border-2 border-red-400 rounded-2xl overflow-hidden transform scale-105 hover-card transition-all duration-300 hover:scale-110 shadow-2xl shadow-red-500/25">
+              <Card className="bg-gradient-to-br from-red-600 via-red-700 to-red-800 border-2 border-red-400 rounded-2xl overflow-hidden transform scale-105 hover-card transition-all duration-300 hover:scale-110 relative shadow-2xl shadow-red-500/30">
+                {/* Efeito Neon */}
+                <div className="absolute inset-0 rounded-2xl border-2 border-red-400 shadow-[0_0_20px_rgba(239,68,68,0.6)] animate-pulse"></div>
+                
                 {/* Badge Superior */}
-                <div className="pt-6 pb-2 text-center">
+                <div className="pt-6 pb-2 text-center relative z-10">
                   <span className="bg-yellow-400 text-black px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wide animate-pulse">
                     MAIS POPULAR
                   </span>
                 </div>
                 
                 {/* Conteúdo Principal */}
-                <div className="px-8 pb-8 text-center">
+                <div className="px-8 pb-8 text-center relative z-10">
                   <h3 className="text-4xl font-bold text-white mb-6">Premium</h3>
                   
                   <div className="mb-8">
@@ -231,7 +234,7 @@ export default function PlansPage() {
 
             {/* Plano VIP */}
             <ScrollReveal delay={400} direction="right">
-              <Card className="bg-gradient-to-br from-purple-800 via-purple-900 to-black border border-purple-500 rounded-2xl overflow-hidden hover-card transition-all duration-300 hover:scale-105 hover:border-purple-400/50">
+              <Card className="bg-gradient-to-br from-purple-800 via-purple-900 to-black border border-purple-500 rounded-2xl overflow-hidden hover-card transition-all duration-300 hover:scale-105 hover:border-purple-400/50 card-glow">
                 {/* Badge Superior */}
                 <div className="pt-6 pb-2 text-center">
                   <span className="bg-purple-500 text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wide">
