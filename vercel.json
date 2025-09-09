@@ -1,7 +1,5 @@
 {
   "version": 2,
-  "name": "fitlife-academia",
-  "alias": ["fitlife-academia"],
   "builds": [
     {
       "src": "package.json",
