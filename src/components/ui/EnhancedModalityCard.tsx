@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
+import Link from 'next/link'
 import { Card } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
 
@@ -230,12 +231,13 @@ export default function EnhancedModalityCard({
               {/* CTA */}
               <div className="pt-6 border-t border-gray-700 text-center">
                 <div className="space-y-4">
-                  <Button 
-                    onClick={() => setShowDetails(false)}
-                    className="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-black py-4 text-lg neon-glow"
-                  >
-                    🚀 Quero Começar Agora!
-                  </Button>
+                  <Link href="/contact" className="block">
+                    <Button 
+                      className="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-black py-4 text-lg neon-glow"
+                    >
+                      🚀 Quero Começar Agora!
+                    </Button>
+                  </Link>
                   <p className="text-sm text-gray-400 leading-relaxed">
                     Entre em contato conosco e agende sua <span className="text-yellow-400 font-semibold">aula experimental gratuita</span>. 
                     Venha conhecer nossa estrutura e professores especializados!
