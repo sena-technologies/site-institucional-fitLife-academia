@@ -6,10 +6,7 @@ import { Button } from "@/components/ui/Button";
 import EnhancedModalityCard from "@/components/ui/EnhancedModalityCard";
 import { ScrollReveal } from "@/hooks/useScrollReveal";
 
-export default function ModalitiesPage() {
-  const [filtroAtivo, setFiltroAtivo] = useState<'Todos' | 'Iniciante' | 'Intermediário' | 'Avançado'>('Todos');
-
-  const todasModalidades = [
+const modalidadesData = [
     {
       name: "Musculação",
       icon: "💪",
@@ -265,6 +262,7 @@ export default function ModalitiesPage() {
   ];
 
   // Filtrar modalidades baseado no filtro ativo
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const modalidadesFiltradas = useMemo(() => {
     if (filtroAtivo === 'Todos') {
       return todasModalidades;

@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
-import { Card } from "@/components/ui/Card";
 import EnhancedModalityCard from "@/components/ui/EnhancedModalityCard";
 import { ScrollReveal } from "@/hooks/useScrollReveal";
 

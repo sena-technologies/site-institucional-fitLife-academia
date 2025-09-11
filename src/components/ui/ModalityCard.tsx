@@ -18,7 +18,6 @@ interface ModalityCardProps {
   }
   difficulty: 'Iniciante' | 'Intermediário' | 'Avançado'
   duration: string
-  image?: string
 }
 
 export default function ModalityCard({ 
@@ -30,8 +29,7 @@ export default function ModalityCard({
   targetAudience = "",
   schedule, 
   difficulty, 
-  duration,
-  image = ""
+  duration
 }: ModalityCardProps) {
   const [isModalOpen, setIsModalOpen] = useState(false)
 
