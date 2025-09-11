@@ -324,7 +324,7 @@ export default function PlansPage() {
                   <p className="text-yellow-400 font-semibold">Plano Básico</p>
                 </div>
                 <div className="text-gray-300 text-center italic mb-4">
-                  "Comecei com o Básico há 8 meses. Perdi 12kg só com musculação! A avaliação física me ajudou muito a entender meu corpo. Agora estou pensando no Premium para variar com aulas."
+                  &quot;Comecei com o Básico há 8 meses. Perdi 12kg só com musculação! A avaliação física me ajudou muito a entender meu corpo. Agora estou pensando no Premium para variar com aulas.&quot;
                 </div>
                 <div className="flex justify-center text-yellow-400">
                   ⭐⭐⭐⭐⭐
@@ -343,7 +343,7 @@ export default function PlansPage() {
                   <p className="text-red-400 font-semibold">Plano Premium</p>
                 </div>
                 <div className="text-gray-300 text-center italic mb-4">
-                  "O Premium foi a melhor escolha! Crossfit, musculação, spinning... nunca fico entediado. Em 6 meses ganhei 8kg de massa magra e melhorei muito meu condicionamento. Vale cada centavo!"
+                  &quot;O Premium foi a melhor escolha! Crossfit, musculação, spinning... nunca fico entediado. Em 6 meses ganhei 8kg de massa magra e melhorei muito meu condicionamento. Vale cada centavo!&quot;
                 </div>
                 <div className="flex justify-center text-yellow-400">
                   ⭐⭐⭐⭐⭐
@@ -362,7 +362,7 @@ export default function PlansPage() {
                   <p className="text-purple-400 font-semibold">Plano VIP</p>
                 </div>
                 <div className="text-gray-300 text-center italic mb-4">
-                  "VIP mudou minha vida! Personal trainer + nutricionista = resultados incríveis. Perdi 20kg em 10 meses. O acesso 24h é perfeito para minha rotina. Investimento que vale a pena!"
+                  &quot;VIP mudou minha vida! Personal trainer + nutricionista = resultados incríveis. Perdi 20kg em 10 meses. O acesso 24h é perfeito para minha rotina. Investimento que vale a pena!&quot;
                 </div>
                 <div className="flex justify-center text-yellow-400">
                   ⭐⭐⭐⭐⭐
